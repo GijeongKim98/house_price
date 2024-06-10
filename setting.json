@@ -1,0 +1,37 @@
+{
+    "path_setting" : {
+        "data_path" : "data",
+        "save_model" : "save_models",
+        "save_submission" : "submission",
+        "log_dir" : "logs"
+    },
+
+    "name_setting" : {
+        "train_name" : "train.csv",
+        "test_name" : "test.csv",
+        "submission_name" : "sample_submission.csv"
+    },
+
+
+    "model_setting" : {
+        "model_name" : "lgbm",
+
+        "lgbm_parameters": {
+
+        },
+
+        "catboost_parameters"  : {
+
+        },
+
+        "xgboost_parameters" : {
+
+        }
+
+    },
+
+    "seed" : 42 
+
+
+}
+
