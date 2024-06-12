@@ -1,0 +1,148 @@
+{
+    "basic_category" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1
+    },
+
+    "exter_qual" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1
+    },
+
+    "exter_cond" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1
+    },
+
+    "bsmt_qual" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1,
+        "None" : 0
+    },
+
+    "bsmt_cond" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1,
+        "None" : 0
+    },
+
+    "bsmt_fin_type1" : {
+        "GLQ": 6,
+        "ALQ": 5,
+        "BLQ": 4,
+        "Rec": 3,
+        "LwQ": 2,
+        "Unf": 1,
+        "None" : 0
+    },
+
+    "bsmt_fin_type2" : {
+        "GLQ": 6,
+        "ALQ": 5,
+        "BLQ": 4,
+        "Rec": 3,
+        "LwQ": 2,
+        "Unf": 1,
+        "None" : 0
+    },
+
+    "bsmt_exposure" : {
+        "Gd" : 4,
+        "Av" : 3,
+        "Mn" : 2,
+        "No" : 1,
+        "None" : 0
+    },
+
+    "kitchen_qual" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1
+    },
+
+    "heating_qc" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1
+    },
+
+    "fireplace_qual" : {
+        "Ex" : 5,
+        "Gd" : 4,
+        "TA" : 3,
+        "Fa" : 2,
+        "Po" : 1,
+        "None" : 0
+    },
+
+    "electrical" : {
+        "SBrkr" : 5,
+        "FuseA" : 4,
+        "FuseF" : 3,
+        "Mix" : 2,
+        "FuseP" : 1
+    },
+    
+    "functional" : {
+        "Typ" : 3,
+        "Min1" : 2,
+        "Min2" : 2,
+        "Mod" : 2,
+        "Maj1" : 1,
+        "Maj2" : 1,
+        "Sev" : 1,
+        "Sal" : 1
+    },
+
+    "garage_qual" : {
+        "Ex" : 3,
+        "Gd" : 2,
+        "TA" : 1,
+        "Fa" : 0,
+        "Po" : 0,
+        "None" : 0
+    },
+
+    "garage_cond" : {
+        "Ex" : 3,
+        "Gd" : 2,
+        "TA" : 1,
+        "Fa" : 0,
+        "Po" : 0,
+        "None" : 0
+    },
+    
+    "garage_finish" : {
+        "Fin" : 3,
+        "RFn" : 2,
+        "Unf" : 1,
+        "None" : 0
+    },
+    
+    "fence_qual" : {
+        "GdPrv" : 2,
+        "MnPrv" : 1,
+        "GdWo" : 2,
+        "MnWw" : 1
+    }
+    
+}

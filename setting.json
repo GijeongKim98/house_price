@@ -9,12 +9,14 @@
     "name_setting" : {
         "train_name" : "train.csv",
         "test_name" : "test.csv",
-        "submission_name" : "sample_submission.csv"
+        "submission_name" : "sample_submission.csv",
+        "column" : "column.json",
+        "category2score" : "category2score.json"
     },
 
 
     "model_setting" : {
-        "model_name" : "lgbm",
+        "model_name" : "catboost",
 
         "lgbm_parameters": {
 
@@ -29,6 +31,8 @@
         }
 
     },
+
+    "is_score" : true,
 
     "seed" : 42 
 
