@@ -26,23 +26,24 @@ def main():
     logger.info("Split data : Train / Test")
 
     # Load Model
-    model = load_model(setting["model_setting"],feature_info=setting["feature_info"])    
+    model = load_model(setting["model_setting"], feature_info=setting["feature_info"])
     logger.info(f"load model : model_name [{setting['model_setting']['model_name']}]")
 
-    
     # Train Model
     logger.info(f"[{setting['model_setting']['model_name']}] Start Training ...")
     models, losses = trainer(model, data, setting, logger)
-    logger.info(f"[{setting['model_setting']['model_name']}] Train Complete. Mean_Loss : {sum(losses)/len(losses):.3f}")
-    
+    logger.info(
+        f"[{setting['model_setting']['model_name']}] Train Complete. Mean_Loss : {sum(losses)/len(losses):.3f}"
+    )
+
     # K-Fold Ensemble & Save Submission
     logger.info("Start ensemble..(k-fold) & Save Submission file")
-    save_path = get_save_submission_path(setting) 
+    save_path = get_save_submission_path(setting)
     k_fold_ensemble(models, losses, data["test"], submission, save_path)
     logger.info("Complete Saving Submission file")
-    
+
     # Save models - worst model and best model
-    
+
     return
 
 

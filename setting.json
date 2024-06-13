@@ -16,7 +16,7 @@
 
 
     "model_setting" : {
-        "model_name" : "catboost",
+        "model_name" : "xgboost",
 
         "lightgbm_parameters": {
             "objective": "regression", 
