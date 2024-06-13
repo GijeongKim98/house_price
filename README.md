@@ -1,5 +1,7 @@
 # 주택 가격 예측 대회
 
+https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
+
 ## 목차
 0. 개요
 1. 단일 컬럼 분석
