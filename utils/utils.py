@@ -115,4 +115,5 @@ def get_save_submission_path(setting):
         setting["path_setting"]["now_path"],
         setting["path_setting"]["save_submission"],
         setting["name_setting"]["save_submission"],
+        ".csv"
     )
