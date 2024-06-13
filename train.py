@@ -39,11 +39,9 @@ def main():
     # K-Fold Ensemble & Save Submission
     logger.info("Start ensemble..(k-fold) & Save Submission file")
     save_path = get_save_submission_path(setting)
-    k_fold_ensemble(models, losses, data["test"], submission, save_path)
-    logger.info("Complete Saving Submission file")
-
-    # Save models - worst model and best model
-
+    k_fold_ensemble(models, losses, data["test"], submission, save_path, logger)
+    logger.info(f"Submission file saved to {setting['name_setting']['save_submission']}.csv")
+    
     return
 
 
