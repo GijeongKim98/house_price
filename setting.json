@@ -18,24 +18,51 @@
     "model_setting" : {
         "model_name" : "catboost",
 
-        "lgbm_parameters": {
-
+        "lightgbm_parameters": {
+            "objective": "regression", 
+            "num_leaves":4,
+            "learning_rate" : 0.01, 
+            "n_estimators" : 5000,
+            "max_bin" : 200, 
+            "bagging_fraction" : 0.75,
+            "bagging_freq" : 5, 
+            "bagging_seed" : 42,
+            "feature_fraction" : 0.2,
+            "feature_fraction_seed" : 42,
+            "verbose": -1,
+            "early_stopping_round" : 10
         },
 
         "catboost_parameters"  : {
-
+            "objective": "RMSE",
+            "iterations" : 1000,
+            "learning_rate" : 0.02
         },
 
         "xgboost_parameters" : {
-
+            "learning_rate":0.01,
+            "n_estimators":4000,
+            "max_depth":3,
+            "min_child_weight":0,
+            "gamma":0,
+            "subsample":0.7,
+            "colsample_bytree":0.7,
+            "objective" :"reg:squarederror",
+            "nthread":-1,
+            "scale_pos_weight":1, 
+            "seed":42,
+            "reg_alpha":0.00006,
+            "early_stopping_rounds" : 10
         }
 
     },
 
     "is_score" : true,
 
-    "seed" : 42 
+    "seed" : 42, 
 
+    "n_splits" : 10,
 
+    "valid_prob" : 0.1
 }
 

@@ -352,8 +352,7 @@ def process_total_data(df, setting):
         setting["feature_info"]["category1"] = list(
             set(setting["feature_info"]["category1"]) - multi_hot_en_cols
         )
-        setting["feature_info"]["category1"].append("exterior")
-        setting["feature_info"]["category1"].append("condition")
+        df = df.drop(columns=["exterior", "condition"])
 
     # Preprocess - time_data
     time_category = ["mo_sold", "year_built_10"]
@@ -422,6 +421,6 @@ def preprocess_data(data: Dict[str, pd.DataFrame], setting: dict) -> pd.DataFram
 
     # get_miss_values(feature)
 
-    print(feature.shape)
+    # print(feature.shape)
 
     return feature, setting["feature_info"]

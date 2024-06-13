@@ -13,6 +13,7 @@ def load_setting() -> dict:
     path = os.path.join(os.getcwd(), "setting.json")
     with open(path) as json_file:
         total_setting = json.load(json_file)
+    total_setting["path_setting"]["now_path"] = os.getcwd()
     return total_setting
 
 
@@ -49,7 +50,7 @@ def get_logger(file_name: str):
                 "filename": f"logs/{file_name}.log",
             },
         },
-        "root": {"level": "DEBUG", "handlers": ["console"]},
+        "root": {"level": "DEBUG", "handlers": ["console","file_handler"]},
     }
 
     logging.config.dictConfig(logger_conf)
@@ -59,10 +60,10 @@ def get_logger(file_name: str):
 
 def check_dir(path_setting: dict):
     for dir_key, dir_name in path_setting.items():
-        if dir_key == "data":
+        if dir_key == "data" or dir_key=="now_path":
             continue
-        if not os.path.isdir(os.path.join(os.getcwd(), dir_name)):
-            os.mkdir(os.path.join(os.getcwd(), dir_name))
+        if not os.path.isdir(os.path.join(path_setting["now_path"], dir_name)):
+            os.mkdir(os.path.join(path_setting["now_path"], dir_name))
 
 
 def init(setting: dict) -> tuple:
@@ -71,7 +72,7 @@ def init(setting: dict) -> tuple:
 
     # now time
     setting["now_times"] = datetime.now().strftime("%Y%m%d_%H%M%S")
-
+    
     # save file path
     setting["name_setting"]["save_model"] = (
         setting["model_setting"]["model_name"] + "_" + setting["now_times"]
@@ -81,7 +82,7 @@ def init(setting: dict) -> tuple:
     )
 
     # Set Feature info
-    data_dir_path = os.path.join(os.getcwd(), setting["path_setting"]["data_path"])
+    data_dir_path = os.path.join(setting["path_setting"]["now_path"], setting["path_setting"]["data_path"])
 
     setting["feature_info"] = load_feature_info(
         os.path.join(data_dir_path, setting["name_setting"]["column"])
@@ -108,3 +109,10 @@ def init(setting: dict) -> tuple:
     np.random.seed(seed)
 
     return setting, logger
+
+def get_save_submission_path(setting):
+    return os.path.join(
+        setting["path_setting"]["now_path"],
+        setting["path_setting"]["save_submission"],
+        setting["name_setting"]["save_submission"],
+    )
